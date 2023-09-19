@@ -56,6 +56,8 @@ export default {
       }
       img {
         height: 20px;
+        filter: invert(13%) sepia(8%) saturate(6028%) hue-rotate(207deg)
+          brightness(91%) contrast(96%);
       }
     }
   }
