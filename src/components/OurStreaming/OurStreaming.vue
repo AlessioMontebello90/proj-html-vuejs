@@ -105,9 +105,9 @@ export default {
       flex-basis: 50%;
       figure {
         width: 600px;
-        height: 500px;
+        height: 400px;
         position: relative;
-        margin-right: 10px;
+        margin-right: 20px;
         img {
           width: 100%;
           height: 100%;

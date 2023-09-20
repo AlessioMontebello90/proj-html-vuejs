@@ -3,24 +3,152 @@ export default {
   name: "NavbarMenu",
   data() {
     return {
-      links: {
-        home: {
-          sublink1: "Home",
-          sublink2: "Restart",
-          sublink3: "Go Back",
-          sublink4: "Homepage",
+      links: [
+        {
+          name: "HOME",
+          href: "#",
+          subnav: [
+            {
+              menuName: "About Us",
+              href: "#",
+            },
+            {
+              menuName: "Matches",
+              href: "#",
+            },
+            {
+              menuName: "Team",
+              href: "#",
+            },
+            {
+              menuName: "Squad",
+              href: "#",
+            },
+            {
+              menuName: "Squad Details",
+              href: "#",
+            },
+            {
+              menuName: "Comming Soon",
+              href: "#",
+            },
+            {
+              menuName: "404",
+              href: "#",
+            },
+          ],
         },
-        pages: {
-          sublink1: "PAGES",
-          sublink2: "About Us",
-          sublink3: "Matches",
-          sublink4: "Team",
-          sublink5: "Squad ",
-          sublink6: "Squad Details",
-          sublink7: "Comming Soon",
-          sublink8: "404",
+        {
+          name: "PAGES",
+          href: "#",
+          subnav: [
+            {
+              menuName: "About Us",
+              href: "#",
+            },
+            {
+              menuName: "Matches",
+              href: "#",
+            },
+            {
+              menuName: "Team",
+              href: "#",
+            },
+            {
+              menuName: "Squad",
+              href: "#",
+            },
+            {
+              menuName: "Squad Details",
+              href: "#",
+            },
+            {
+              menuName: "Comming Soon",
+              href: "#",
+            },
+            {
+              menuName: "404",
+              href: "#",
+            },
+          ],
         },
-      },
+        {
+          name: "TOURNAMENT",
+          href: "#",
+        },
+        {
+          name: "SHOP",
+          href: "#",
+          subnav: [
+            {
+              menuName: "About Us",
+              href: "#",
+            },
+            {
+              menuName: "Matches",
+              href: "#",
+            },
+            {
+              menuName: "Team",
+              href: "#",
+            },
+            {
+              menuName: "Squad",
+              href: "#",
+            },
+            {
+              menuName: "Squad Details",
+              href: "#",
+            },
+            {
+              menuName: "Comming Soon",
+              href: "#",
+            },
+            {
+              menuName: "404",
+              href: "#",
+            },
+          ],
+        },
+        {
+          name: "BLOG",
+          href: "#",
+          subnav: [
+            {
+              menuName: "About Us",
+              href: "#",
+            },
+            {
+              menuName: "Matches",
+              href: "#",
+            },
+            {
+              menuName: "Team",
+              href: "#",
+            },
+            {
+              menuName: "Squad",
+              href: "#",
+            },
+            {
+              menuName: "Squad Details",
+              href: "#",
+            },
+            {
+              menuName: "Comming Soon",
+              href: "#",
+            },
+            {
+              menuName: "404",
+              href: "#",
+            },
+          ],
+        },
+        {
+          name: "CONTACT",
+          href: "#",
+        },
+      ],
     };
   },
 };
@@ -29,71 +157,27 @@ export default {
 <template>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-          HOME
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">HOME</a></li>
-          <li><a class="dropdown-item" href="#">HOME</a></li>
-          <li><a class="dropdown-item" href="#">HOME</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
+      <li v-for="link in this.links" class="nav-item dropdown">
         <a
+          v-if="link.subnav"
           class="nav-link dropdown-toggle"
-          href="#"
+          :href="link.href"
           data-bs-toggle="dropdown"
-          aria-expanded="false"
         >
-          PAGES
+          {{ link.name }}
+        </a>
+        <a v-else class="nav-link" href="#">
+          {{ link.name }}
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">PAGES</a></li>
-          <li><a class="dropdown-item" href="#">PAGES</a></li>
-          <li><a class="dropdown-item" href="#">PAGES</a></li>
+          <li v-for="sub in link.subnav">
+            <a class="dropdown-item" href="#">{{ sub.menuName }}</a>
+          </li>
         </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">TOURNAMENT</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          SHOP
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">SHOP</a></li>
-          <li><a class="dropdown-item" href="#">SHOP</a></li>
-          <li><a class="dropdown-item" href="#">SHOP</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          BLOG
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">BLOG</a></li>
-          <li><a class="dropdown-item" href="#">BLOG</a></li>
-          <li><a class="dropdown-item" href="#">BLOG</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CONTACT</a>
       </li>
     </ul>
   </div>
 </template>
-
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
 a {
@@ -102,22 +186,47 @@ a {
 }
 #navbarNavDropdown {
   justify-content: center;
-  a {
-    &:hover {
-      color: #05cc7c;
+  ul {
+    li {
+      margin: 0 10px;
+    }
+    a {
+      &:hover {
+        color: $dark-green;
+      }
+      &:focus {
+        color: $dark-green;
+      }
     }
   }
   ul.dropdown-menu.show {
-    background-color: transparent;
-    padding: 5px 10px;
+    background-color: $darker-blue;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
     border: 0;
     min-width: 100%;
+    li {
+      margin: 0;
+      &::after {
+        content: "";
+        display: block;
+        margin: 0 10px;
+        height: 1px;
+        border-top: 1px solid $white;
+      }
+      &:last-of-type::after {
+        border-top: 0 solid $white;
+      }
+    }
   }
   .dropdown-item {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 13px;
     &:hover {
       background-color: rgba($black, 0.6);
     }
-    padding: 3px 0;
   }
   .show {
     color: $dark-green;
