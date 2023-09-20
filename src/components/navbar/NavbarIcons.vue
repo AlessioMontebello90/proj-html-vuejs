@@ -24,13 +24,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .icons {
   display: flex;
   .circle {
     margin: 0 5px;
     height: 40px;
     width: 40px;
-    background-color: white;
+    background-color: $white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -47,8 +48,8 @@ export default {
         height: 25px;
         width: 25px;
         border-radius: 50%;
-        background-color: #4350ff;
-        color: white;
+        background-color: $blue;
+        color: $white;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -20,9 +20,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .gaming-arena {
   height: 100vh;
-  background-color: #202046;
+  background-color: $darker-blue;
   background-image: url("../../assets/img/Vector.png");
   display: flex;
   align-items: center;

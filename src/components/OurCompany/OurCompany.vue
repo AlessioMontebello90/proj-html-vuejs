@@ -20,8 +20,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .our-company {
-  background-color: #191935;
+  background-color: $darkest-blue;
   padding-top: 150px;
   padding-bottom: 100px;
   .container {

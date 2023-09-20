@@ -1,6 +1,28 @@
 <script>
 export default {
   name: "NavbarMenu",
+  data() {
+    return {
+      links: {
+        home: {
+          sublink1: "Home",
+          sublink2: "Restart",
+          sublink3: "Go Back",
+          sublink4: "Homepage",
+        },
+        pages: {
+          sublink1: "PAGES",
+          sublink2: "About Us",
+          sublink3: "Matches",
+          sublink4: "Team",
+          sublink5: "Squad ",
+          sublink6: "Squad Details",
+          sublink7: "Comming Soon",
+          sublink8: "404",
+        },
+      },
+    };
+  },
 };
 </script>
 
@@ -32,20 +54,8 @@ export default {
           <li><a class="dropdown-item" href="#">PAGES</a></li>
         </ul>
       </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          TOURNAMENT
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">TOURNAMENT</a></li>
-          <li><a class="dropdown-item" href="#">TOURNAMENT</a></li>
-          <li><a class="dropdown-item" href="#">TOURNAMENT</a></li>
-        </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="#">TOURNAMENT</a>
       </li>
       <li class="nav-item dropdown">
         <a
@@ -85,9 +95,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 a {
   padding: 5px;
-  color: white;
+  color: $white;
 }
 #navbarNavDropdown {
   justify-content: center;
@@ -104,12 +115,12 @@ a {
   }
   .dropdown-item {
     &:hover {
-      background-color: rgba(black, 0.6);
+      background-color: rgba($black, 0.6);
     }
     padding: 3px 0;
   }
   .show {
-    color: #05cc7c;
+    color: $dark-green;
   }
 }
 </style>

@@ -26,14 +26,15 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../assets/scss/variables" as *;
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   a.read {
     text-decoration: none;
-    color: #202046;
-    background-color: #05cc7c;
+    color: $darker-blue;
+    background-color: $green;
     border-radius: 10px;
     padding: 15px 30px;
     margin: 0 20px;
@@ -46,8 +47,8 @@ export default {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #202046;
-    background-color: #05cc7c;
+    color: $darker-blue;
+    background-color: $green;
     border-radius: 50%;
     padding: 20px 22px;
     img {

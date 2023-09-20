@@ -38,6 +38,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .social-links {
   position: absolute;
   top: 42%;
@@ -46,12 +47,12 @@ export default {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #202046;
+    background-color: $darker-blue;
     display: flex;
     justify-content: center;
     align-items: center;
     &:hover {
-      background-color: #05cc7c;
+      background-color: $green;
     }
     img {
       height: 20px;

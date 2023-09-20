@@ -58,20 +58,21 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .company-info {
   flex-basis: 50%;
   padding-top: 20px;
   h5 {
-    color: #05cc7c;
+    color: $dark-green;
     margin-bottom: 20px;
   }
   h3 {
-    color: white;
+    color: $white;
     margin-bottom: 35px;
     font-size: 50px;
   }
   p {
-    color: white;
+    color: $white;
     margin-bottom: 20px;
   }
   li {
@@ -83,7 +84,7 @@ export default {
     span {
       width: 25px;
       height: 25px;
-      border: 2px solid #05cc7c;
+      border: 2px solid $green;
       border-radius: 50%;
       padding: 5px;
       display: flex;

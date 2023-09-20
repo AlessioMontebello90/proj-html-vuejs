@@ -34,8 +34,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .player-icons {
-  background-color: #202046;
+  background-color: $darker-blue;
   border-radius: 25px;
   display: flex;
   justify-content: space-between;

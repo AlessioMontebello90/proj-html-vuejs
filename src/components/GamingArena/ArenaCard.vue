@@ -36,6 +36,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .arena-card {
   width: 45%;
   height: 50%;
@@ -47,20 +48,20 @@ export default {
   align-items: center;
   text-align: center;
   &.green {
-    background-color: #05cc7c;
-    color: #202046;
+    background-color: $green;
+    color: $darker-blue;
   }
   &.blue {
-    background-color: #333287;
-    color: white;
+    background-color: $dark-blue;
+    color: $white;
   }
   .circle {
     border-radius: 50%;
-    background-color: #202046;
+    background-color: $darker-blue;
     img {
       width: 80px;
-      height: 78px;
-      padding: 10px;
+      height: 80px;
+      padding: 20px;
     }
   }
   h3 {

@@ -18,21 +18,22 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .arena-info {
   flex-basis: 45%;
   h5 {
-    color: #05cc16;
+    color: $dark-green;
     width: 180px;
-    background-color: rgba(black, 0.2);
+    background-color: rgba($black, 0.2);
     margin-bottom: 10px;
   }
   h3 {
-    color: white;
+    color: $white;
     margin-bottom: 35px;
     font-size: 40px;
   }
   p {
-    color: white;
+    color: $white;
     margin-bottom: 20px;
   }
 }

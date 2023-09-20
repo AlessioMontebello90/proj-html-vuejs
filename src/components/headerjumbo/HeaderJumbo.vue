@@ -22,14 +22,15 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/variables" as *;
 .welcome {
   text-align: center;
   h5 {
-    color: #05cc7c;
+    color: $dark-green;
     margin-bottom: 20px;
   }
   h1 {
-    color: white;
+    color: $white;
     font-size: 70px;
     margin-bottom: 50px;
   }
