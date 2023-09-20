@@ -36,6 +36,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/mixins" as *;
 .logo {
   flex-basis: 50%;
   position: relative;
@@ -44,10 +45,7 @@ export default {
     #top-img {
       height: 450px;
       z-index: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include absolute-center();
     }
     #top-shape {
       position: absolute;

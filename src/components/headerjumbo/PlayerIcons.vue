@@ -35,17 +35,15 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .player-icons {
+  @include center("c-between");
   background-color: $darker-blue;
   border-radius: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px;
   margin: 50px 0;
   figure {
-    display: flex;
-    align-items: center;
+    @include center("cross");
     margin: 10px 0;
     img {
       height: 100px;

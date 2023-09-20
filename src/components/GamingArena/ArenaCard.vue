@@ -37,15 +37,14 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .arena-card {
+  @include center();
   width: 45%;
   height: 50%;
   border-radius: 25px;
   margin: 5px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   &.green {
     background-color: $green;
@@ -56,7 +55,7 @@ export default {
     color: $white;
   }
   .circle {
-    border-radius: 50%;
+    @include round();
     background-color: $darker-blue;
     img {
       width: 80px;

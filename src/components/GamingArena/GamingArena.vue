@@ -21,17 +21,16 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .gaming-arena {
+  @include center("cross");
   height: 100vh;
   background-color: $darker-blue;
   background-image: url("../../assets/img/Vector.png");
-  display: flex;
-  align-items: center;
+
   .container {
+    @include center("c-between");
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 </style>

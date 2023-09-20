@@ -27,10 +27,9 @@ export default {
 
 <style scoped lang="scss">
 @use "../assets/scss/variables" as *;
+@use "../assets/scss/mixins" as *;
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center();
   a.read {
     text-decoration: none;
     color: $darker-blue;
@@ -43,13 +42,11 @@ export default {
     }
   }
   a.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center();
+    @include round();
     text-decoration: none;
     color: $darker-blue;
     background-color: $green;
-    border-radius: 50%;
     padding: 20px 22px;
     img {
       height: 20px;

@@ -25,34 +25,30 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .icons {
   display: flex;
   .circle {
+    @include center();
+    @include round();
     margin: 0 5px;
     height: 40px;
     width: 40px;
     background-color: $white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include center();
       .circle-small {
+        @include center();
+        @include round();
         position: absolute;
         top: -30%;
         right: -30%;
         height: 25px;
         width: 25px;
-        border-radius: 50%;
         background-color: $blue;
         color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 12px;
       }
       img {

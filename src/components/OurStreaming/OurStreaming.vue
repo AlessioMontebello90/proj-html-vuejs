@@ -6,8 +6,8 @@ export default {
 
 <template>
   <section class="our-streaming">
-    <div class="container">
-      <div class="live-stream">
+    <div class="container h-100">
+      <div class="live-stream h-100">
         <figure>
           <img
             class="img-fluid"
@@ -28,18 +28,15 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .our-streaming {
   height: 80vh;
   background-image: url("../../assets/img/v-bg.png");
   background-size: cover;
   .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
+    @include center("cross");
     .live-stream {
-      height: 100%;
-      display: flex;
-      align-items: center;
+      @include center("cross");
       flex-basis: 50%;
       figure {
         width: 392px;
@@ -47,18 +44,14 @@ export default {
         position: relative;
       }
       a.arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center();
+        @include round();
+        @include absolute-center();
         text-decoration: none;
         color: $white;
         background-color: $green;
-        border-radius: 50%;
         padding: 20px 22px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
         img {
           height: 20px;
         }

@@ -59,6 +59,7 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .company-info {
   flex-basis: 50%;
   padding-top: 20px;
@@ -76,20 +77,17 @@ export default {
     margin-bottom: 20px;
   }
   li {
+    @include center("cross");
     list-style-type: none;
     color: white;
-    display: flex;
-    align-items: center;
     margin: 15px 0;
     span {
+      @include center();
+      @include round();
       width: 25px;
       height: 25px;
       border: 2px solid $green;
-      border-radius: 50%;
       padding: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-right: 15px;
     }
     img {

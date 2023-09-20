@@ -1,0 +1,28 @@
+@mixin center($axis: "both") {
+  display: flex;
+
+  @if $axis == "main" {
+    justify-content: center;
+  } @else if $axis == "cross" {
+    align-items: center;
+  } @else if $axis == "between" {
+    justify-content: space-between;
+  } @else if $axis == "c-between" {
+    align-items: center;
+    justify-content: space-between;
+  } @else {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin round() {
+  border-radius: 50%;
+}

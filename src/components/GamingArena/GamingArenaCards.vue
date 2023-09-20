@@ -15,11 +15,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../../assets/scss/mixins" as *;
 .arena-cards-list {
+  @include center("cross");
   height: 70%;
   flex-basis: 45%;
   flex-wrap: wrap;
-  display: flex;
-  align-items: center;
 }
 </style>

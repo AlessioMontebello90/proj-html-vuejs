@@ -39,18 +39,17 @@ export default {
 
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 .social-links {
   position: absolute;
   top: 42%;
   left: 50px;
   figure {
+    @include center();
+    @include round();
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     background-color: $darker-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     &:hover {
       background-color: $green;
     }
