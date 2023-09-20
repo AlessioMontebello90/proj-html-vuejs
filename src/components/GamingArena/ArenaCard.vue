@@ -50,9 +50,17 @@ export default {
     background-color: $green;
     color: $darker-blue;
   }
+  &.green:hover {
+    background-color: $dark-blue;
+    color: $white;
+  }
   &.blue {
     background-color: $dark-blue;
     color: $white;
+  }
+  &.blue:hover {
+    background-color: $green;
+    color: $darker-blue;
   }
   .circle {
     @include round();
