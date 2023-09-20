@@ -166,12 +166,12 @@ export default {
         >
           {{ link.name }}
         </a>
-        <a v-else class="nav-link" href="#">
+        <a v-else class="nav-link" :href="link.href">
           {{ link.name }}
         </a>
         <ul class="dropdown-menu">
           <li v-for="sub in link.subnav">
-            <a class="dropdown-item" href="#">{{ sub.menuName }}</a>
+            <a class="dropdown-item" :href="sub.href">{{ sub.menuName }}</a>
           </li>
         </ul>
       </li>
