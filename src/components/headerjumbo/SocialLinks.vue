@@ -40,7 +40,7 @@ export default {
 <style scoped lang="scss">
 .social-links {
   position: absolute;
-  top: 45%;
+  top: 42%;
   left: 50px;
   figure {
     width: 50px;
