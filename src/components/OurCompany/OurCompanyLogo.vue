@@ -37,7 +37,6 @@ export default {
 
 <style scoped lang="scss">
 .logo {
-  height: 100%;
   flex-basis: 50%;
   position: relative;
   figure {

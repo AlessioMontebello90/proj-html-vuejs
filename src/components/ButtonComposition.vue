@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="buttons">
+  <div class="buttons justify-content-center">
     <a class="read" href="#"
       ><b>{{ text }} More </b>
       <img
