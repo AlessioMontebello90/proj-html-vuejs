@@ -1,11 +1,17 @@
 <script>
 export default {
   name: "MatchCard",
+  props: {
+    list: Array,
+  },
 };
 </script>
 
 <template>
-  <div class="match-card mb-5 d-flex justify-content-between">
+  <div
+    v-if="this.list.all || this.list.Pubg"
+    class="match-card mb-5 d-flex justify-content-between"
+  >
     <div class="players">
       <div class="player-card d-flex">
         <figure>
@@ -55,7 +61,10 @@ export default {
       </div>
     </div>
   </div>
-  <div class="match-card mb-5 d-flex justify-content-between">
+  <div
+    v-if="this.list.all || this.list.AC"
+    class="match-card mb-5 d-flex justify-content-between"
+  >
     <div class="players">
       <div class="player-card d-flex">
         <figure>
@@ -105,7 +114,10 @@ export default {
       </div>
     </div>
   </div>
-  <div class="match-card mb-5 d-flex justify-content-between">
+  <div
+    v-if="this.list.all || this.list.Mcx"
+    class="match-card mb-5 d-flex justify-content-between"
+  >
     <div class="players">
       <div class="player-card d-flex">
         <figure>
@@ -155,7 +167,10 @@ export default {
       </div>
     </div>
   </div>
-  <div class="match-card mb-5 d-flex justify-content-between">
+  <div
+    v-if="this.list.all || this.list.Cod"
+    class="match-card mb-5 d-flex justify-content-between"
+  >
     <div class="players">
       <div class="player-card d-flex">
         <figure>
