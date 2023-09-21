@@ -78,6 +78,7 @@ export default {
     li {
       color: $white;
       margin: 0 10px;
+      cursor: pointer;
       &:hover {
         color: $dark-green;
       }
