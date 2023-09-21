@@ -50,22 +50,14 @@ export default {
             <h3>Checkout Our Live Streaming</h3>
           </div>
           <div class="arrows">
-            <div class="prev">
+            <div class="prev" @click="SetIndex">
               <div class="circle green">
-                <img
-                  src="../../assets/img/image (11).svg"
-                  alt="prev"
-                  @click="SetIndex"
-                />
+                <img src="../../assets/img/image (11).svg" alt="prev" />
               </div>
             </div>
             <div class="next">
               <div class="circle white">
-                <img
-                  src="../../assets/img/image (8).svg"
-                  alt="next"
-                  @click="SetIndex"
-                />
+                <img src="../../assets/img/image (8).svg" alt="next" />
               </div>
             </div>
           </div>

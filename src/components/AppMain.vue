@@ -6,6 +6,7 @@ import UpcomingMatch from "./UpcomingMatch/UpcomingMatch.vue";
 import TrendingGames from "./TrendingGames/TrendingGames.vue";
 import Matches from "./Matches/Matches.vue";
 import OurExperts from "./OurExpert/OurExperts.vue";
+import Testimonials from "./Testimonials/Testimonials.vue";
 export default {
   name: "AppMain",
   components: {
@@ -16,6 +17,7 @@ export default {
     TrendingGames,
     Matches,
     OurExperts,
+    Testimonials,
   },
 };
 </script>
@@ -27,6 +29,7 @@ export default {
   <TrendingGames />
   <Matches />
   <OurExperts />
+  <Testimonials />
 </template>
 
 <style scoped lang="scss"></style>

@@ -47,7 +47,7 @@ export default {
 @use "../../assets/scss/variables" as *;
 .our-experts {
   height: 90vh;
-  background-color: $darker-blue;
+  background-color: $darkest-blue;
   padding: 150px 0;
 }
 h5 {

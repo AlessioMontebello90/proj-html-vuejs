@@ -218,7 +218,7 @@ export default {
     height: 80px;
     color: $white;
     text-align: center;
-    background-color: $dark-blue;
+    background-color: $darker-blue;
     h6 {
       font-size: 18px;
     }
