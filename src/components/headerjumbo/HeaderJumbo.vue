@@ -1,5 +1,5 @@
 <script>
-import ButtonComposition from "../ButtonComposition.vue";
+import ButtonComposition from "../Buttons/ButtonComposition.vue";
 export default {
   name: "HeaderJumbo",
   components: {

@@ -150,6 +150,7 @@ export default {
           @include round();
           padding: 10px;
           margin: 0 10px;
+          cursor: pointer;
           &.green {
             background-color: $green;
             img {
@@ -162,7 +163,6 @@ export default {
           }
           img {
             height: 18px;
-            cursor: pointer;
           }
         }
       }

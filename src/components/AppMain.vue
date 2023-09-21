@@ -3,6 +3,7 @@ import OurCompany from "./OurCompany/OurCompany.vue";
 import GamingArena from "./GamingArena/GamingArena.vue";
 import OurStreaming from "./OurStreaming/OurStreaming.vue";
 import UpcomingMatch from "./UpcomingMatch/UpcomingMatch.vue";
+import TrendingGames from "./TrendingGames/TrendingGames.vue";
 export default {
   name: "AppMain",
   components: {
@@ -10,6 +11,7 @@ export default {
     GamingArena,
     OurStreaming,
     UpcomingMatch,
+    TrendingGames,
   },
 };
 </script>
@@ -19,6 +21,7 @@ export default {
   <GamingArena />
   <OurStreaming />
   <UpcomingMatch />
+  <TrendingGames />
 </template>
 
 <style scoped lang="scss"></style>
