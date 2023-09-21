@@ -37,7 +37,6 @@ export default {
   },
 };
 </script>
-
 <template>
   <footer>
     <div class="container">
@@ -93,7 +92,6 @@ export default {
     </div>
   </footer>
 </template>
-
 <style scoped lang="scss">
 @use "../assets/scss/variables" as *;
 @use "../assets/scss/mixins" as *;
@@ -130,6 +128,7 @@ footer {
       color: $white;
       a {
         color: $dark-green;
+        text-decoration: none;
       }
     }
   }

@@ -1,10 +1,6 @@
 <script>
-import PlayButton from "../Buttons/PlayButton.vue";
 export default {
   name: "TrendingGamesCard",
-  components: {
-    PlayButton,
-  },
 };
 </script>
 
@@ -76,7 +72,6 @@ export default {
     </figure>
   </div>
 </template>
-
 <style scoped lang="scss">
 @use "../../assets/scss/variables" as *;
 @use "../../assets/scss/mixins" as *;

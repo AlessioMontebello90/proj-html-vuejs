@@ -1,25 +1,22 @@
 <script>
-import TrendingGamesCard from "./TrendingGamesCard.vue";
+import MatchesCard from "./MatchesCard.vue";
 export default {
-  name: "TrendingGames",
-  data() {
-    return {
-      index: 0,
-    };
-  },
+  name: "Matches",
   components: {
-    TrendingGamesCard,
+    MatchesCard,
   },
 };
 </script>
+
 <template>
-  <div class="trending-games">
+  <div class="matches">
     <div class="container">
-      <div class="choose-game d-flex justify-content-between align-items-end">
-        <div class="title">
-          <h5>Trending Games</h5>
-          <h3 class="m-0">Choose Who Is The Best In The World!</h3>
+      <div class="title d-flex justify-content-between align-items-end">
+        <div class="text">
+          <h5>Trading Battle</h5>
+          <h3 class="m-0">Upcoming Match</h3>
         </div>
+
         <div class="arrows">
           <div class="prev">
             <div class="circle green">
@@ -41,30 +38,37 @@ export default {
           </div>
         </div>
       </div>
-      <TrendingGamesCard />
+      <MatchesCard />
     </div>
   </div>
 </template>
+
 <style scoped lang="scss">
-@use "../../assets/scss/mixins" as *;
 @use "../../assets/scss/variables" as *;
-.trending-games {
-  background-color: $darker-blue;
-  background-image: url("../../assets/img/protfolio-vector.png");
-  background-size: cover;
+@use "../../assets/scss/mixins" as *;
+.matches {
+  @include center("cross");
+  height: 100vh;
+  background-image: url("../../assets/img/v-bg.png");
   padding: 150px 0;
-  .choose-game {
-    margin-bottom: 30px;
-  }
 }
 h5 {
+  width: 130px;
   color: $dark-green;
-  margin-bottom: 10px;
+  background-color: rgba($black, 0.2);
 }
 h3 {
   color: $white;
-  margin-bottom: 35px;
-  font-size: 37px;
+  font-size: 40px;
+}
+.circle {
+  @include center();
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 7px;
+  margin: 0 5px;
+  background-color: $green;
 }
 .arrows {
   display: flex;
@@ -72,6 +76,8 @@ h3 {
   .circle {
     @include center();
     @include round();
+    width: 40px;
+    height: 40px;
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
