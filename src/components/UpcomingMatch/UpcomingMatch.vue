@@ -9,11 +9,10 @@ export default {
     return {
       list: [
         {
-          all: true,
-          Pubg: true,
-          Cod: true,
-          AC: true,
-          Mcx: true,
+          Pubg: false,
+          Cod: false,
+          AC: false,
+          Mcx: false,
         },
       ],
     };
